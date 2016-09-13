@@ -1,0 +1,24 @@
+#BlueJ class context
+comment0.params=name\ password\ isMale\ DOB\ hasCoupon\ bookedSeats
+comment0.target=Standard(java.lang.String,\ java.lang.String,\ boolean,\ Date,\ boolean,\ java.util.ArrayList)
+comment1.params=
+comment1.target=Standard()
+comment10.params=toAdd
+comment10.target=void\ addSeat(Seat)
+comment2.params=price
+comment2.target=double\ getPrice(double)
+comment3.params=
+comment3.target=java.lang.String\ getName()
+comment4.params=toChange
+comment4.target=void\ changePassword(java.lang.String)
+comment5.params=toChange
+comment5.target=void\ changeName(java.lang.String)
+comment6.params=toChange
+comment6.target=void\ changeGender(boolean)
+comment7.params=toChange
+comment7.target=void\ changeDOB(Date)
+comment8.params=
+comment8.target=java.lang.String\ getPassword()
+comment9.params=
+comment9.target=java.lang.String\ toString()
+numComments=11

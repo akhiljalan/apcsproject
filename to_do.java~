@@ -1,0 +1,75 @@
+/*
+ * Flight Selection isn't triggered from login GUI
+ * Display seats
+ * Fix New Account GUI's shit
+ //         FileWriter fw = new FileWriter("Storage.doc");
+//         PrintWriter pw = new PrintWriter(fw);
+// 
+//         pw.close();
+//         fw.close(); 
+/*
+ * 1. Wrapper classes
+2. logical operators (&&, ||)
+6. Interaction between all classes (interface, information hiding)
+7. Inheritance hierarchy must be implemented (super, extend)
+8. At least one interface must be implemented with student-designed classes. 
+12. Comments explaining logic and operation of program at key points
+13. Meaningful variable names
+
+ */
+
+/*
+ * DONE:
+ * 10 & 11: flight display uses arraylist + iterator
+ * 2: dateDifference in Date class uses relational operators
+ * 5: Tons of classes, customer is abstract
+ * 3: There are if-else statements in Seat Class, generateLabel
+ * 4: There are for loops in flightDisplay
+ * 9: Polymorphism in customer classes 
+ * 2: logical operator in flightselect
+ * 14: Upper case in Plane class and pList searcher
+ */
+
+//GUI TO DO
+/*
+ * 
+ */
+
+//REQUIREMENTS TO DO
+/* 8: Interface - ask marrill/twiet
+ * 1: Wrapper Class - custo
+ * 
+ */
+
+//CLI TO DO
+/*
+ * Discounts not given for platinums via methods b/c they won't work 
+ */
+
+
+//BINDER
+/*
+ * 1. CODE
+ *  - need to highlight requirements 1-14
+ * 2. UML
+ * 3. JAVA DOCUMENTATION
+ * 4. POWERPOINT
+ */
+
+
+//NIGHT BEFORE
+/*
+ * COMPILER ERRORS:
+ * 1 - DISPLAYING FLIGHT
+ *       FLIGHT DISPLAY GUI = NEW GUI IN SELECTFLIGHTGUI
+ *       ACCESSEDPLANE.GETSEATING IN FLIGHTDISPLAY
+ *       
+ */
+public class to_do
+{
+    public static void main (String[]args)
+    {
+        System.out.println("bitches");
+
+    }
+}

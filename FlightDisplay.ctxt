@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=accessedPlane\ today\ loggedIn
+comment0.target=FlightDisplay(Plane,\ Date,\ Customer)
+comment1.params=ev
+comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment2.params=row\ col
+comment2.target=void\ seatSelectedSequence(int,\ int)
+comment3.params=
+comment3.target=void\ seatSelectedSequence()
+comment4.params=
+comment4.target=javax.swing.JFrame\ getFrame()
+comment5.params=importedFrame
+comment5.target=void\ launchFrame(javax.swing.JFrame)
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+numComments=7

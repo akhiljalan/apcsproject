@@ -1,0 +1,28 @@
+import java.util.*;
+public class Plane777 extends Plane
+{
+    private Seat[][] eseating;
+    Scanner z = new Scanner(System.in); 
+    //private ArrayList ecustomers;
+    private int emonth; private int eday; 
+
+    public Plane777(Seat[][] seating, Date departure, String destination, String departing) //month & day the plane leaves
+    {
+            super(seating, departure, destination, departing);
+    }
+    public  double getPriceofTicket(Customer c)
+    {
+         double price = 300; //return f; 
+
+        price *= now.dateForPriceDifference(edeparture, now);
+
+        //NEED TO ADD: PRICE CHANGES BASED ON CUSTOMER TYPE
+        //if (c.getClass().equasl(Platinum.class())) bleh
+        
+
+        return price; 
+    }
+
+
+}
+

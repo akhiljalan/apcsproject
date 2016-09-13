@@ -1,0 +1,33 @@
+import java.util.*;
+public class Plane747 extends Plane
+{
+    private Seat[][] eseating;
+    Scanner z = new Scanner (System.in);
+    //private ArrayList ecustomers;
+    
+    //current day and month when the customer logs in. if i can, I want to have the code access from computer
+
+    public Plane747(Seat[][] seating, Date departure, String destination, String departing) //month & day the plane leaves
+    {
+        super(seating, departure, destination, departing);
+        
+    }
+    
+    
+    
+    public  double getPriceofTicket(Customer c)
+    {
+        double price = 300; //return f; 
+
+        price *= now.dateForPriceDifference(edeparture, now);
+
+        //NEED TO ADD: PRICE CHANGES BASED ON CUSTOMER TYPE
+        //if (c.getClass().equasl(Platinum.class())) bleh
+        
+
+        return price; 
+    }
+            
+    
+}
+

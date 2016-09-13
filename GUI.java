@@ -1,0 +1,164 @@
+import javax.swing.*;
+import javax.swing.event.*;
+import java.awt.*;
+import java.awt.event.*; 
+import java.util.*;
+/*
+ * NOTES
+ * JMenu menu = new JMenu("File");
+ * JMenuItem menuitem = new JMenuItem("Quit");
+ * f.setJMenuBar(aa);
+ * menu.add(menuitem);
+ * JOptionPane.showMessageDialog(null, "string"); 
+ */
+
+/*
+ * Initial place customers see
+ * displays a username and password entry field
+ * 
+ */
+public class GUI extends JFrame implements ActionListener, Airlines
+{
+    Scanner z = new Scanner (System.in); 
+    private JButton NewAccountButton = new JButton("Create new account"); 
+    private JButton LoginButton = new JButton("Login"); 
+   
+    private static  JFrame f = new JFrame("Jalan Airlines");//frame of class, all objects added to this
+    
+    //instance variables
+    private JPasswordField epassword; 
+    public Date currentDate; 
+    public   JTextField username = new JTextField("", 30); //enter the usernmae
+    private Data data = new Data(); 
+
+    public GUI()
+    {
+        JOptionPane.showMessageDialog(null, "Hello appi");
+
+        //panels
+        JPanel panel1 = new JPanel(); 
+        JPanel panel2 = new JPanel(); 
+        
+        //labels for the textfields
+        JLabel usernameLabel = new JLabel("Username");
+        JLabel passwordLabel = new JLabel ("Password"); 
+        //enter the password
+        JPasswordField password = new JPasswordField("", 30); 
+        
+        //action listeners to determine whether text has been enterered 
+        username.addActionListener(this);
+        password.addActionListener(this);
+        epassword = password; 
+        
+        //add objects to the panels
+        panel1.add(usernameLabel); 
+        panel1.add(username);
+        panel1.add(passwordLabel);
+        panel1.add(password);
+        panel2.add(LoginButton); 
+        panel2.add(NewAccountButton);
+
+        //panel with the textfields is centralized
+        f.getContentPane().add(panel1, BorderLayout.CENTER);
+        f.getContentPane().add(panel2, BorderLayout.SOUTH); //panel with buttons is south
+
+        //action listeners for buttons
+        NewAccountButton.addActionListener(this);
+        LoginButton.addActionListener(this);
+
+        getDate(); //get date method
+    }
+
+
+    public JFrame getFrame()
+    {
+        return f;
+    }
+
+    public void getDate() //gets the date via option panes
+    {
+        JOptionPane enterDate = new JOptionPane("Date");
+
+        boolean keepTryingDates = false; 
+
+        String monthEntered = enterDate.showInputDialog("Enter the current month");
+        String dayEntered = enterDate.showInputDialog("Enter the current day"); 
+        String yearEntered = enterDate.showInputDialog("Enter the current year"); 
+
+        try //only if numbers entered as strings
+        {
+            Integer month = Integer.parseInt(monthEntered); 
+            Integer day = Integer.parseInt(dayEntered); 
+            Integer year = Integer.parseInt(yearEntered); 
+            Date today = new Date (month, day, year); 
+
+            currentDate = today; 
+        }
+        catch (NumberFormatException nfe)
+        {
+            keepTryingDates = false; 
+        }
+    }
+
+    public void actionPerformed (ActionEvent ev) //action performed method
+    {
+        String command = ev.getActionCommand(); 
+        Object source = ev.getSource(); 
+        boolean launchLogin = false; 
+
+        if (source == LoginButton)
+        {
+            char[] passwordChars = epassword.getPassword();
+            String passwordEntered = ""; 
+            for(int x = 0; x < passwordChars.length; x++)
+            {
+                passwordEntered += passwordChars[x]; 
+            }
+            //checks whether the name and password match anything
+            launchLogin = data.customersOfficial().loginCheck(username.getText(), passwordEntered); 
+            
+            if (!launchLogin)
+            {
+                JOptionPane.showMessageDialog(f, "Your username or password failed! Try again"); 
+                launchFrame(f);
+            }
+        }
+        if (source==NewAccountButton)
+            NewAccountSequence(); //takes it to new account gui
+        if (launchLogin)
+        {
+            //getcustomer method to return a customer object 
+            //parameter allows for the rest of the program to know who is logged in
+            LoginSequence(data.customersOfficial().getCustomer(username.getText())); 
+            //uses cList method to find the customer by name 
+        }
+
+    }
+    
+
+    public void LoginSequence(Customer loggedIn) //
+    {
+        LoginGUI toLaunch = new LoginGUI(currentDate, loggedIn); 
+        toLaunch.launchFrame(toLaunch.getFrame()); 
+    }
+
+    public void NewAccountSequence() //if new account button is clicked
+    {
+        NewAccountGUI toLaunch = new NewAccountGUI(currentDate); 
+        toLaunch.launchFrame(toLaunch.getFrame()); 
+    }
+
+    public void launchFrame(JFrame f2) //launches the frame initially
+    {
+        f2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f2.pack();//adjusts panel to components for display
+        //f2.setSize(400, 400); 
+        f2.setVisible(true);
+    }
+
+    public static void main (String[]args)
+    {
+        GUI g = new GUI();
+        g.launchFrame(f);
+    }
+}

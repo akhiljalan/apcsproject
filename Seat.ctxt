@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=Bought\ row\ col
+comment0.target=Seat(boolean,\ int,\ int)
+comment1.params=Bought\ row\ col\ departure\ destination\ whenLeaving
+comment1.target=Seat(boolean,\ int,\ int,\ java.lang.String,\ java.lang.String,\ Date)
+comment2.params=
+comment2.target=boolean\ isTaken()
+comment3.params=whatTo
+comment3.target=void\ changeBoolean(boolean)
+comment4.params=
+comment4.target=java.lang.String\ generateLabel()
+comment5.params=
+comment5.target=java.lang.String\ customerViewer()
+numComments=6

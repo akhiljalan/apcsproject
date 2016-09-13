@@ -1,0 +1,25 @@
+import javax.swing.*;
+import javax.swing.event.*;
+import java.awt.*;
+import java.awt.event.*; 
+import java.util.*;
+
+public class GUIBasic
+{
+    private JFrame frameOfScreen; 
+    public GUIBasic()
+    {
+    }
+    public void launchFrame(JFrame importedFrame)
+    {
+        importedFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        importedFrame.pack(); 
+        ///importedFrame.setSize(400, 400); 
+        importedFrame.setVisible(true);
+    }
+    public JFrame getFrame()
+    {
+        return frameOfScreen; 
+    } 
+    
+}

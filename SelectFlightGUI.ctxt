@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=today\ loggedIn
+comment0.target=SelectFlightGUI(Date,\ Customer)
+comment1.params=
+comment1.target=javax.swing.JFrame\ getFrame()
+comment2.params=importedFrame
+comment2.target=void\ launchFrame(javax.swing.JFrame)
+comment3.params=ev
+comment3.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment4.params=departure\ destination
+comment4.target=void\ searchFlightSequence(java.lang.String,\ java.lang.String)
+comment5.params=foundPlane
+comment5.target=void\ displayFlightSequence(Plane)
+comment6.params=departure\ destination
+comment6.target=java.util.ArrayList\ databaseSearch(java.lang.String,\ java.lang.String)
+comment7.params=args
+comment7.target=void\ main(java.lang.String[])
+numComments=8

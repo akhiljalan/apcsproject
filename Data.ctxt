@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Data()
+comment1.params=
+comment1.target=pList\ planesOfficial()
+comment2.params=
+comment2.target=cList\ customersOfficial()
+comment3.params=
+comment3.target=java.util.ArrayList\ generatePlanes()
+comment4.params=
+comment4.target=Seat[][]\ generateSeats()
+comment5.params=
+comment5.target=java.util.ArrayList\ generateCustomers()
+numComments=6

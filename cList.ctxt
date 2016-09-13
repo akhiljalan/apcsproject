@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=customers
+comment0.target=cList(java.util.ArrayList)
+comment1.params=
+comment1.target=java.lang.String\ toString()
+comment2.params=arrayIndex
+comment2.target=Customer\ getCustomer(int)
+comment3.params=name
+comment3.target=Customer\ getCustomer(java.lang.String)
+comment4.params=username\ password
+comment4.target=boolean\ loginCheck(java.lang.String,\ java.lang.String)
+numComments=5
